@@ -9,10 +9,10 @@ data "digitalocean_domain" "web" {
     name = var.domain_name
 }
 
-resource "digitalocean_record" "COPY_THIS_AND_PUT_YOUR_NAME" {
+resource "digitalocean_record" "mme1" {
     domain = data.digitalocean_domain.web.name
     type   = "A"
     name   = "my-dns-record"
-    value  = "PUT_YOUR_IP_HERE"
+    value  = "mme1"
     ttl    = 30
 }
